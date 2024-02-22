@@ -15,9 +15,9 @@
     $result = $conn->query($sql);
     $row = mysqli_fetch_object($result);
     
-    $name = $row['name'];
-    $len = strlen($row['data']);
-    $type = $row['type'];
+    $name = $row->name;
+    $len = strlen($row->data);
+    $type = $row->type;
     header("content-type: ".$type);
     header("content-length: ".$len);
     header("content-disposition: attachment; filename=".$name);
