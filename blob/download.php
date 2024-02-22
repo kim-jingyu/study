@@ -11,7 +11,7 @@
 
     $id = $_GET['id'];
 
-    $sql = "SELECT data FROM image_test WHERE id=$id";
+    $sql = "SELECT * FROM image_test WHERE id=$id";
     $result = $conn->query($sql);
     $row = mysqli_fetch_object($result);
     
