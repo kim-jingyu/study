@@ -18,7 +18,7 @@
     $data = $file['tmp_name'];
     $type = $file['type'];
 
-    $sql = "INSERT INTO image_test('name', 'data', 'type') VALUES($name, $data, $type)";
+    $sql = "INSERT INTO image_test(name, data, type) VALUES('$name', '$data', '$type')";
     $res = $conn->query($sql);
     if(!$res) {
         die("파일 저장 실패");
