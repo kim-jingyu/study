@@ -8,7 +8,7 @@ loginForm.addEventListener("submit", e => {
     const userPw = loginForm.querySelector("#inputPassword").value;
     const errorMsg = document.querySelector("#errorMsg");
 
-    const url = `/loginProcess.php?userId=${userId}&${userPw}`;
+    const url = `/firstSessionLastLogin/loginProcess.php?userId=${userId}&${userPw}`;
 
     fetch(url)
         .then((resp) => resp.json())
@@ -17,6 +17,8 @@ loginForm.addEventListener("submit", e => {
             
             if (resultData == 'ok') {
                 errorMsg.classList.add(hiddenClass);
+
+                location = "index.php";
             } else {
                 errorMsg.classList.remove(hiddenClass);
             }
