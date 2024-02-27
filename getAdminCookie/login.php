@@ -3,10 +3,12 @@
     $password = $_POST['password'];
     $fail = false;
 
-    setcookie("loginUser", $userId, time() + 3600, "/");
-
     if ($_COOKIE['loginUser'] == 'admin') {
         header("Location: index.php");
+    }
+
+    if ($userId == 'admin' && $password == 'qkqh') {
+        setcookie("loginUser", $userId, time() + 3600, "/");
     } else {
         $fail = true;
     }
