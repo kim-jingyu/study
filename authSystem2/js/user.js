@@ -11,8 +11,9 @@ function goMenu(code, userLevel) {
             if (authCheck('admin', userLevel)) {
                 location.href = './fireAttack.php';
                 break;
+            } else {
+                alert('권한이 없습니다.');
             }
-            alert('권한이 없습니다.');
             break;
         case '1129':
             location.href = './logout.php';
