@@ -8,7 +8,7 @@
     if ($userId == 'admin' && $password == 'qkqh') {
         header("Location: index.php");
     } else {
-        $_SESSION['loginFail'] = true;
+        $_SESSION['loginFail'] = 'loginFail';
         echo "<script>location.href='/getAdminCookie/login.php'</script>"
     }
 ?>

@@ -25,7 +25,7 @@
             <button name="submit" value="로그인" class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
 
             <?php
-                if ($_SESSION['loginFail']) {
+                if ($_SESSION['loginFail'] == 'loginFail') {
                     echo '<div id="errorMsg" class="alert alert-danger alert-dismissable d-none" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
