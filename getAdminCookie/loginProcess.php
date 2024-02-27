@@ -9,6 +9,6 @@
         header("Location: index.php");
     } else {
         $_SESSION['loginFail'] = 'loginFail';
-        echo "<script>location.href='/getAdminCookie/login.php'</script>"
+        echo "<script>location.href='/getAdminCookie/login.php'</script>";
     }
 ?>
