@@ -7,7 +7,14 @@
         header("Location: index.php");
     }
 
-    setcookie("loginUser", $userId, time() + 3600, "/");
+    if (isset($_POST['userId'])) {
+        if ($userId == 'admin' && $password == 'qkqh') {
+            setcookie("loginUser", $userId, time() + 3600, "/");
+            $fail = false;
+        } else {
+            $fail = true;
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
