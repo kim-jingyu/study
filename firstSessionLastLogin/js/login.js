@@ -1,4 +1,4 @@
-const hiddenClass = "hidden";
+const hiddenClass = "d-none";
 const loginForm = document.querySelector("form");
 
 loginForm.addEventListener("submit", e => {
@@ -18,7 +18,7 @@ loginForm.addEventListener("submit", e => {
             if (resultData == 'ok') {
                 errorMsg.classList.add(hiddenClass);
 
-                location = "index.php";
+                location.href = "index.php";
             } else {
                 errorMsg.classList.remove(hiddenClass);
             }
