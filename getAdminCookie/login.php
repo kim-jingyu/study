@@ -6,7 +6,7 @@
     session_start();
     setcookie("loginUser", $userId, time() + 3600, "/");
 
-    if ($userId == 'admin' && $password == 'qkqh') {
+    if ($_COOKIE['loginUser'] == 'admin') {
         header("Location: index.php");
     } else {
         $fail = true;
