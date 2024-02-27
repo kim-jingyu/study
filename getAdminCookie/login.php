@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,17 +24,22 @@
                 required>
             <button name="submit" value="로그인" class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
 
-            <div id="errorMsg" class="alert alert-danger alert-dismissable d-none" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <strong>Warning!</strong> 로그인 실패!
-            </div>
+            <?php
+                if ($_SESSION['loginFail']) {
+                    echo '<div id="errorMsg" class="alert alert-danger alert-dismissable d-none" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <strong>Warning!</strong> 로그인 실패!
+                        </div>';
+                }
+            ?>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
