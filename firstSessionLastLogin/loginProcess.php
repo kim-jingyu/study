@@ -8,8 +8,8 @@
     header('Content-Type: application/json; charset=UTF-8');
 
     if ($userId == 'admin' && $password == 'qkqh') {
-        echo json_encode("ok");
+        echo json_encode(array("ok"));
     } else {
-        echo json_encode("fail");
+        echo json_encode(array("fail"));
     }
 ?>

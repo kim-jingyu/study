@@ -18,7 +18,7 @@ loginForm.addEventListener("submit", e => {
             if (resultData == 'ok') {
                 errorMsg.classList.add(hiddenClass);
 
-                location.href = "index.php";
+                location.href = "/firstSessionLastLogin/index.php";
             } else {
                 errorMsg.classList.remove(hiddenClass);
             }
