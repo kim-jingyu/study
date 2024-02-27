@@ -17,7 +17,6 @@
 <body>
     <div class="container">
         <div class="header clearfix">
-            <h3 class="text-muted">메뉴</h3>
             <nav>
                 <ul class="nav nav-pills pull-right">
                     <li role="presentation" class="active"><a href="#">Home</a></li>
@@ -25,6 +24,7 @@
                     <li role="presentation"><a href="#" onclick="goMenu('1129', '')">Logout</a></li>
                 </ul>
             </nav>
+            <h3 class="text-muted">메뉴</h3>
         </div>
         <div class="jumbotron">
             <h1>핵미사일 시스템</h1>
