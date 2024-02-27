@@ -8,7 +8,7 @@ loginForm.addEventListener("submit", e => {
     const userPw = loginForm.querySelector("#inputPassword").value;
     const errorMsg = document.querySelector("#errorMsg");
 
-    const url = `/firstSessionLastLogin/loginProcess.php?userId=${userId}&${userPw}`;
+    const url = `/firstSessionLastLogin/loginProcess.php?userId=${userId}&password=${userPw}`;
 
     fetch(url)
         .then((resp) => resp.json())
