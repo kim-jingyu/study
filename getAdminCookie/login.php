@@ -3,7 +3,6 @@
     $password = $_POST['password'];
     $fail = false;
 
-    session_start();
     setcookie("loginUser", $userId, time() + 3600, "/");
 
     if ($_COOKIE['loginUser'] == 'admin') {
@@ -37,7 +36,7 @@
 
             <?php
                 if ($fail) {
-                    echo '<div id="errorMsg" class="alert alert-danger alert-dismissable d-none" role="alert">
+                    echo '<div id="errorMsg" class="alert alert-danger alert-dismissable" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
                             <strong>Warning!</strong> 로그인 실패!
