@@ -1,5 +1,16 @@
 <?php
+    $userId = $_POST['userId'];
+    $password = $_POST['password'];
+    $fail = false;
+
     session_start();
+    setcookie("loginUser", $userId, time() + 3600, "/");
+
+    if ($userId == 'admin' && $password == 'qkqh') {
+        header("Location: index.php");
+    } else {
+        $fail = true;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +25,7 @@
 
 <body>
     <div class="container">
-        <form action="loginProcess.php" method="post" name="loginForm" class="form-signin">
+        <form action="" method="post" name="loginForm" class="form-signin">
             <h2 class="form-signin-heading">로그인</h2>
             <label for="inputUserId" class="sr-only">UserId</label>
             <input name="userId" type="text" id="inputUserId" class="form-control" placeholder="UserId" required
@@ -25,7 +36,7 @@
             <button name="submit" value="로그인" class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
 
             <?php
-                if ($_SESSION['loginFail'] == 'loginFail') {
+                if ($fail) {
                     echo '<div id="errorMsg" class="alert alert-danger alert-dismissable d-none" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
