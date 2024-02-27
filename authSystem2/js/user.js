@@ -17,6 +17,7 @@ function goMenu(code, userLevel) {
             break;
         case '1129':
             location.href = './logout.php';
+            break;
         default:
             alert('없는 메뉴입니다.');
     }
