@@ -10,8 +10,7 @@
     if (isset($_POST['userId'])) {
         if (($userId == 'admin' && $password == 'qkqh') || ($userId == 'user' && $password == '1234')) {
             setcookie("loginUser", $userId, time() + 3600, "/");
-            echo "<script>location.reload(true);</script>";
-            $fail = false;
+            header("Location: index.php");
         } else {
             $fail = true;
         }
