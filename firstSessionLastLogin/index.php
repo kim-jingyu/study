@@ -9,6 +9,6 @@
     <title>메인페이지</title>
 </head>
 <body>
-    Hi! I'm <?php $_SESSION['userId']; ?>!
+    Hi! I'm <?php echo $_SESSION['userId']; ?>!
 </body>
 </html>
